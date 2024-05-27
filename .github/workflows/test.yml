@@ -14,5 +14,6 @@ jobs:
               run: npm ci
             - name: testing..
               run: |
-                npm test
+                npm run lint
+                npm run test
                 npm build
