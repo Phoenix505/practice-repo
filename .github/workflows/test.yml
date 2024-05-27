@@ -26,6 +26,8 @@ jobs:
               uses: actions/setup-node@v3
               with:
                 node-version: 18
+            - name: install dependiencies
+              run: npm ci
             - name: deploying
               run: |
                 npm run build
