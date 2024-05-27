@@ -16,6 +16,17 @@ jobs:
               run: |
                 npm run lint
                 npm run test
+    deploying:
+        needs: testing
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get the code
+              uses: actions/checkout@v3
+            - name: install nodeJS
+              uses: actions/setup-node@v3
+              with:
+                node-version: 18
             - name: deploying
-              needs: [testing]
-              run: npm run build
+              run: |
+                npm run build
+                echo "SUCCESS"
