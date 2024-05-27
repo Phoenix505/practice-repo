@@ -16,4 +16,4 @@ jobs:
               run: |
                 npm run lint
                 npm run test
-                npm build
+                npm run build
